@@ -1,6 +1,6 @@
 <?php 
 class Veiculo {
-    public $marca;
+    public string $marca;
 
     public function __construct($marca) {
         $this->marca = $marca; // Atribui a marca do veículo

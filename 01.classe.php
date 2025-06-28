@@ -1,7 +1,8 @@
 <?php
 class Carro{
-    public $marca; // Propriedade pública
-    public $modelo; // Propriedade pública
+    public string $marca; // Propriedade pública
+    public string $modelo; // Propriedade pública
+    public int $ano; // Propriedade pública (opcional)
 
     public function __construct($marca, $modelo){
         $this->marca = $marca; // Atribui o valor da marca
