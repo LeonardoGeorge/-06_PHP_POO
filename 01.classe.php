@@ -1,8 +1,9 @@
 <?php
-class Carro{
+class Carro {
     public string $marca; // Propriedade pública
     public string $modelo; // Propriedade pública
     public int $ano; // Propriedade pública (opcional)
+    public string $cor; // Propriedade pública (opcional)
 
     public function __construct($marca, $modelo){
         $this->marca = $marca; // Atribui o valor da marca
@@ -17,6 +18,8 @@ class Carro{
 
 // Criação de objeto
 $meuCarro = new Carro("Ford", "Mustang");
-$meuCarro->acelerar(); // Chama o método acelerar do objeto 
+$meuCarro->acelerar(); // Chama o método acelerar do objeto
+$seuCarro = new Carro("Chevrolet", "Camaro");
+$seuCarro-> cor = "Amarelo"; // Adiciona uma nova propriedade dinamicamente
 
 ?>
