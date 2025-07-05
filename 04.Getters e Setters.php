@@ -5,7 +5,7 @@ Class Produto {
     private $preco;
     
     public function __construct(string $nome, float $preco) {
-        $this->$nome = $nome;
+        $this->nome = $nome;
         $this->preco = $preco;
     }
 
@@ -20,7 +20,7 @@ Class Produto {
 
 $produto1 = new Produto("Tablet Samsung", 250.00);
 
-echo "Nome do produto: " . $produto->getNome() . "<br>";
-echo "Preço do produto: R$" . $produto->getPreco();
+echo "Nome do produto: " . $produto1->getNome() . "<br>";
+echo "Preço do produto: R$" . $produto1->getPreco();
 
 ?>
