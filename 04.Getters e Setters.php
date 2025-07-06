@@ -9,11 +9,17 @@ Class Produto {
         $this->preco = $preco;
     }
 
+    // Getters
     public function getNome(): string {
         return $this->nome;
     }
     public function getPreco(): float {
         return $this->preco;
+    }
+
+   // Setters 
+    public function setPreco(float $preco) {
+        $this->preco = $preco;
     }
 }
 
