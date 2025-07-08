@@ -40,13 +40,14 @@ class Passaro extends Animal {
         echo "Pássaro criado com sucesso!<br>";
     }
     
-    public function ave() {
+    public function ave($ave) {
         echo "O pássaro respira: " . $this->respira . "<br>";
         echo "O pássaro se move: " . $this->mover . "<br>";
+        echo "O passsaro é uma ave: $ave <br>";
     }
     
-    public function cantar() {
-        echo "O pássaro está cantando!<br>";
+    public function cantar($cantar) {
+        echo "O pássaro está cantando: $cantar<br>";
     }
     
     public function numeroPatas() {
@@ -64,6 +65,12 @@ echo "<hr>";
 $gato = new Mamifero("Ar", "Andando", 4);
 $gato->tipoDeMamifero('Gato');  
 $gato->emitirSom('Miau');
+
+
+echo "<hr>";
+$papagaio = new Passaro();
+$papagaio->ave('Papagaio');   
+$papagaio->cantar('Falou! Falou!');
 
 
 ?>
