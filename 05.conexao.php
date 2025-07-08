@@ -15,8 +15,14 @@ class Conexao {
         // Simula a execução de uma query
         echo "Executando a query: Consulta realizada com sucesso! <br>";
     }
+
+    public function __destruct() {
+        $this->conexao = null;
+        echo "Conexão encerrada com sucesso!<br>";
+    }
 }
 
 
 $conexao = new Conexao();
-$conexao->query();  
+$conexao->query();      
+
