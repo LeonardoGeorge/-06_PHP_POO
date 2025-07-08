@@ -2,24 +2,21 @@
 // 1. Criar uma instacia de pagamentos
 // 2. O usuario escolhe o metodo de pagamento
 // 3. O sistema vai CHAMAR o metodo PAGAR daquele método escolhido.
-
-class Pagamento {
-    public function pagar($valor) {
-        echo "Pagamento realizado no R$$valor, feito com sucesso!<br>";
-    }
+interface Pagamento {
+    public function pagar($valor);
 }
 
-class CartaoCredito extends Pagamento {
+class CartaoCredito implements Pagamento {
     public function pagar($valor) {
         echo "Pagamento realizado com Cartão de Crédito!<br>";
     }
 }
-class Boleto extends Pagamento {
+class Boleto implements Pagamento {
     public function pagar($valor) {
         echo "Pagamento realizado com Boleto!<br>";
     }
 }
-class Pix extends Pagamento {
+class Pix implements Pagamento {
     public function pagar($valor) {
         echo "Pagamento realizado com Pix!<br>";
     }
