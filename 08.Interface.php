@@ -8,16 +8,19 @@ interface Pagamento {
 
 class CartaoCredito implements Pagamento {
     public function pagar($valor) {
+        return true;
         echo "Pagamento realizado com Cartão de Crédito!<br>";
     }
 }
 class Boleto implements Pagamento {
     public function pagar($valor) {
+        return true;
         echo "Pagamento realizado com Boleto!<br>";
     }
 }
 class Pix implements Pagamento {
     public function pagar($valor) {
+        return false; // Simulando falha no pagamento
         echo "Pagamento realizado com Pix!<br>";
     }
 }
@@ -27,7 +30,7 @@ echo "1. Cartão de Crédito<br>";
 echo "2. Boleto<br>";
 echo "3. Pix<br>";
 // Simulando a escolha do usuário
-$escolha = 3; // Suponha que o usuário escolheu Pix.
+$escolha = 2; // Suponha que o usuário escolheu Pix.
 $valor = 100.00; // Valor do pagamento  
 switch ($escolha) {
     case 1:
@@ -45,6 +48,14 @@ switch ($escolha) {
 }
 // Realizando o pagamento
 $pagamento->pagar($valor);
+// Verificando se o pagamento foi realizado com sucesso
+if($pagamento->pagar($valor)) {
+    echo "Pagamento de R$ $valor realizado com sucesso!<br>";
+} else {
+    echo "Falha no pagamento de R$ $valor!<br>";
+}
+// Fim do código de pagamento
+echo "Fim do processo de pagamento!<br>";
     
 
 
