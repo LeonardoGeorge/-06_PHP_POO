@@ -30,7 +30,7 @@ echo "1. Cartão de Crédito<br>";
 echo "2. Boleto<br>";
 echo "3. Pix<br>";
 // Simulando a escolha do usuário
-$escolha = 2; // Suponha que o usuário escolheu Pix.
+$escolha = 2; 
 $valor = 100.00; // Valor do pagamento  
 switch ($escolha) {
     case 1:
