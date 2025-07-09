@@ -18,6 +18,29 @@ class user {
         $this->log('Usuário logado');
     }
 }
+class File {
+    use Logger;
+    
+    public function createFile() {
+        echo 'Arquivo criado <br>';
+        $this->log('Arquivo criado');
+    }
+
+    public function deleteFile() {
+        echo 'Arquivo deletado <br>';
+        $this->log('Arquivo deletado');
+    }
+}
+
+$user = new user();
+$user->createUser();
+$user->usuarioLogado();
+
+echo "<hr>";
+
+$file = new File();
+$file->createFile();
+$file->deleteFile();
 
 
 
