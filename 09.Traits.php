@@ -1,17 +1,18 @@
 <?php
 function meu_autoload($className) {
-    include_once('classes/' . strtolower($className) . '.class.php'); 
+    $directory = ['classes/', 'traits/'];
+
+    foreach ($directory as $dir) {
+        $directory = strtolower($dir);
+        if (file_exists($dir . strtolower($className) . '.class.php')) {
+            include_once($dir . strtolower($className) . '.class.php');
+            break;
+        }
+    }
 }
 
 spl_autoload_register('meu_autoload');
 
-
-trait Logger {
-    public function log($messsage) {
-        echo "Log: " . $messsage . "<br>";
-        echo "Data: " . date('Y-m-d H:i:s') . "<br>";
-    }
-}
 
 $user = new user();
 $user->createUser();
