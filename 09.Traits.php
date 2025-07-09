@@ -1,10 +1,9 @@
 <?php
 function meu_autoload($className) {
-    include_once('classes/' . $className . '.class.php'); 
+    include_once('classes/' . strtolower($className) . '.class.php'); 
 }
 
-meu_autoload('user');
-meu_autoload('file');
+spl_autoload_register('meu_autoload');
 
 
 trait Logger {
